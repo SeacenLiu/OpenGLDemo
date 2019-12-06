@@ -59,7 +59,7 @@
 		14644317239A661800C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1464431C239A664700C54EBC /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		14644320239A66FE00C54EBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		14644322239A682F00C54EBC /* EnvironmentConfiguration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnvironmentConfiguration.png; sourceTree = "<group>"; };
+		14644322239A682F00C54EBC /* EnvironmentConfig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnvironmentConfig.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 		14644321239A675600C54EBC /* imgs */ = {
 			isa = PBXGroup;
 			children = (
-				14644322239A682F00C54EBC /* EnvironmentConfiguration.png */,
+				14644322239A682F00C54EBC /* EnvironmentConfig.png */,
 			);
 			path = imgs;
 			sourceTree = "<group>";

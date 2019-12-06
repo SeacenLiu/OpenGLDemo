@@ -2,7 +2,7 @@
 OpenGL Study Demo
 
 ## 环境配置
-![环境配置](./imgs/EnvironmentConfiguration.png)
+![环境配置](/imgs/EnvironmentConfig.png)
 
 - GLFW
 - GLAD
