@@ -16,8 +16,8 @@
  *              - 通过glVertexAttribPointer调用与顶点属性关联的顶点缓冲对象
  * 顶点缓冲对象：Vertex Buffer Object，VBO
  *            - 在GPU内存（通常被称为显存）中储存大量顶点
- *            
  * 索引缓冲对象：Element Buffer Object，EBO或Index Buffer Object，IBO
+ *            - 储存索引的缓冲
  *
  */
 
