@@ -10,13 +10,13 @@
  * https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
  *
  * 顶点数组对象：Vertex Array Object，VAO
- *            - 在GPU内存（通常被称为显存）中储存大量顶点
  *            - 储存内容：
  *              - glEnableVertexAttribArray和glDisableVertexAttribArray的调用。
  *              - 通过glVertexAttribPointer设置的顶点属性配置。
  *              - 通过glVertexAttribPointer调用与顶点属性关联的顶点缓冲对象
  * 顶点缓冲对象：Vertex Buffer Object，VBO
- *            - 存储顶点状态
+ *            - 在GPU内存（通常被称为显存）中储存大量顶点
+ *            
  * 索引缓冲对象：Element Buffer Object，EBO或Index Buffer Object，IBO
  *
  */
@@ -24,6 +24,10 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+// 窗口的宽高
+const unsigned int SCR_WIDTH = 800;
+const unsigned int SCR_HEIGHT = 600;
 
 /** 顶点数组
  * x1, y1, z1,
@@ -46,9 +50,6 @@ float vertices[] = {
      0.5f, -0.5f, 0.0f,
      0.0f,  0.5f, 0.0f
 };
-
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
 
 #pragma mark - 顶点着色器
 const char *vertexShaderSource = "#version 330 core\n"
@@ -144,18 +145,15 @@ int main(int argc, const char * argv[]) {
     glDeleteShader(fragmentShader);
     
     // --- 配置 VBO & VAO ---
-    // 创建 VBO
-    unsigned int VBO;
+    unsigned int VBO, VAO;
+    // 创建 VBO 并绑定顶点缓冲对象
     glGenBuffers(1, &VBO);
-    // 绑定顶点缓冲对象
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // 创建 VAO
-    unsigned int VAO;
-    glGenVertexArrays(1, &VAO);
-    // 绑定 VAO
-    glBindVertexArray(VAO);
     // 将定义的顶点对象放进 VBO 中
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    // 创建 VAO 并绑定顶点数组
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
     // 指定顶点数据的解析方式
     // 标准化: 所有数据都会被映射到0（对于有符号型signed数据是-1）到1之间
     glVertexAttribPointer(0,                 // 顶点属性 (location = 0)
@@ -166,32 +164,36 @@ int main(int argc, const char * argv[]) {
                           (void*)0);         // 数据在缓冲中起始位置的偏移量
     // 以顶点属性位置值作为参数，启用顶点属性
     glEnableVertexAttribArray(0);
-    // 绑定 VAO
-    glBindVertexArray(VAO);
     
+    // glVertexAttribPointer 将 VBO 注册为顶点属性的绑定顶点缓冲区对象后可以安全地解除绑定
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    // 解绑 VAO 避免后续误改该 VAO
     glBindVertexArray(0);
     
     // 一个简单的渲染循环（每一帧调用一次）
     while (!glfwWindowShouldClose(window)) {
-        // 处理用户输入
+        // 1. 处理用户输入
         processInput(window);
         
-        // 渲染指令
-        // 设置清空屏幕所用的颜色
+        // 2. 渲染指令
+        // 2-1: 设置清空屏幕所用的颜色
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         // 清除颜色缓冲之后，整个颜色缓冲都会被填充为glClearColor里所设置的颜色
         glClear(GL_COLOR_BUFFER_BIT);
         
-        // 绘制三角形
+        // 3. 绘制三角形
+        // 3-1: 使用编译好的周色漆程序
         glUseProgram(shaderProgram);
+        // 3-2: 绑定 VAO
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        // 3-3: 绘制操作
+        glDrawArrays(GL_TRIANGLES, // 绘制类型
+                     0,            // 顶点数组的起始索引
+                     3);           // 绘制的顶点数
         
-        // 检查并调用事件，交换缓冲
-        // 交换颜色缓冲（一个储存着GLFW窗口每一个像素颜色值的大缓冲），它在这一迭代中被用来绘制，并且将会作为输出显示在屏幕上
+        // 4. 检查并调用事件，交换缓冲
         glfwSwapBuffers(window);
-        // 检查有没有触发什么事件（比如键盘输入、鼠标移动等）、更新窗口状态，并调用对应的回调函数
+        // 5. 检查有没有触发什么事件（比如键盘输入、鼠标移动等）、更新窗口状态，并调用对应的回调函数
         glfwPollEvents();
     }
     
