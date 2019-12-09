@@ -1,15 +1,14 @@
 //
 //  main.cpp
-//  DownwardTriangle
+//  HOffsetTriangle
 //
 //  Created by SeacenLiu on 2019/12/9.
 //  Copyright © 2019 SeacenLiu. All rights reserved.
 //
 
 /**
- * 练习一:(https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#_8)
- * 修改顶点着色器让三角形上下颠倒
- * 通过修改顶点着色器中坐标值(y *= -1)颠倒显示三角形
+ * 练习二:(https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#_8)
+ * 使用uniform定义一个水平偏移量，在顶点着色器中使用这个偏移量把三角形移动到屏幕右侧
  */
 
 #include <glad/glad.h>
@@ -36,7 +35,7 @@ int main(int argc, const char * argv[]) {
     // --------------- 创建窗口 ---------------
     GLFWwindow *window = glfwCreateWindow(SCR_WIDTH,
                                           SCR_HEIGHT,
-                                          "Downward Triangle",
+                                          "HOffset Triangle",
                                           NULL,
                                           NULL);
     if (window == NULL) {
@@ -74,9 +73,14 @@ int main(int argc, const char * argv[]) {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         // 3. 绘制三角形
+        // 3-1: 激活程序
         ourShader.use();
+        // 3-2: 设置 Uniform 值
+        ourShader.setFloat("horizontalOffset", 0.5f);
+        // 3-3: 绑定 VAO
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 6);
+        // 3-4: 绘制顶点数组
+        glDrawArrays(GL_TRIANGLES, 0, 3);
         // 4. 交换缓冲
         glfwSwapBuffers(window);
         // 5. 处理事件

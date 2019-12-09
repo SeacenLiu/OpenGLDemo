@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>HOffsetTriangle.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>HelloRectange.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -68,6 +73,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>146443A4239E5D4C00C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146443B5239E6DE800C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
