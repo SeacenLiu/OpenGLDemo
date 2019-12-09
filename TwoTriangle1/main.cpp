@@ -1,13 +1,14 @@
 //
 //  main.cpp
-//  TwoTriangle
+//  TwoTriangle1
 //
 //  Created by SeacenLiu on 2019/12/9.
 //  Copyright © 2019 SeacenLiu. All rights reserved.
 //
 
 /**
- * 创建相同的两个三角形，但对它们的数据使用不同的VAO和VBO
+ * 练习一: (https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/#_12)
+ * 添加更多顶点到数据中，使用glDrawArrays，尝试绘制两个彼此相连的三角形
  */
 
 #include <iostream>
@@ -15,17 +16,15 @@
 #include <GLFW/glfw3.h>
 #include "shaderhelp.h"
 #include "glhelp.h"
+using namespace std;
 
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-float vertices1[] = {
+float vertices[] = {
     -0.5f,  0.5f, 0.0f,
     -1.0f, -0.5f, 0.0f,
      0.0f, -0.5f, 0.0f,
-};
-
-float vertices2[] = {
      0.5f,  0.5f, 0.0f,
      1.0f, -0.5f, 0.0f,
      0.0f, -0.5f, 0.0f,
@@ -58,7 +57,7 @@ int main(int argc, const char * argv[]) {
                                           NULL,
                                           NULL);
     if (window == NULL) {
-        std::cout << "创建窗口失败" << std::endl;
+        cout << "创建窗口失败" << endl;
         glfwTerminate();
         return -1;
     }
@@ -66,39 +65,27 @@ int main(int argc, const char * argv[]) {
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     // --------------- 初始化 GLAD ---------------
     if (!gladInitialize()) {
-        std::cout << "初始化 GLAD 拓展失败" << std::endl;
+        cout << "初始化 GLAD 拓展失败" << endl;
         return -1;
     }
     // --------------- 构建着色器程序 ---------------
     GLuint shaderProgram = CreateShaderProgram(vertexShaderSource,
                                                fragmentShaderSource);
     if (!shaderProgram) {
-        std::cout << "着色器程序创建数百" << std::endl;
+        cout << "着色器程序创建数百" << endl;
         return -1;
     }
     // --------------- 配置 VBO & VAO ---------------
-    // VBO1 & VAO1
-    GLuint VBO1;
-    glGenBuffers(1, &VBO1);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO1);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices1), vertices1, GL_STATIC_DRAW);
-    GLuint VAO1;
-    glGenVertexArrays(1, &VAO1);
-    glBindVertexArray(VAO1);
+    GLuint VBO;
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    GLuint VAO;
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
-    // VBO2 & VAO2
-    GLuint VBO2;
-    glGenBuffers(1, &VBO2);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO2);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices2), vertices2, GL_STATIC_DRAW);
-    GLuint VAO2;
-    glGenVertexArrays(1, &VAO2);
-    glBindVertexArray(VAO2);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
+    // 设置完成后解绑，防止误操作
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
     // --------------- 渲染循环 ---------------
@@ -110,15 +97,15 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT);
         // 3. 绘制三角形
         glUseProgram(shaderProgram);
-        glBindVertexArray(VAO1);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(VAO2);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 6);
         // 4. 交换缓冲
         glfwSwapBuffers(window);
         // 5. 处理事件
         glfwPollEvents();
     }
+    // 释放/删除之前的分配的所有资源
+    glfwTerminate();
     return 0;
 }
 

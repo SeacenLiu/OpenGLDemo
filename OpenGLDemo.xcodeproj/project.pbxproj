@@ -19,12 +19,15 @@
 		14644333239CFEEC00C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		14644334239CFF2900C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
 		14644335239CFF2900C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
-		1464433F239D567900C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464433E239D567900C54EBC /* main.cpp */; };
-		14644343239D5BC600C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
-		14644344239D5BD100C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
-		1464434C239E008E00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464434B239E008E00C54EBC /* main.cpp */; };
-		14644350239E00C400C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
-		14644351239E012200C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		14644359239E1EF200C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14644358239E1EF200C54EBC /* main.cpp */; };
+		1464435D239E1F1B00C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		1464435E239E1F2700C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
+		14644366239E1F3D00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14644365239E1F3D00C54EBC /* main.cpp */; };
+		14644371239E1F4600C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14644370239E1F4600C54EBC /* main.cpp */; };
+		14644375239E1F5000C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		14644376239E1F5600C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
+		14644377239E1F8900C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
+		14644378239E1F8F00C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +67,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		1464433A239D567900C54EBC /* CopyFiles */ = {
+		14644354239E1EF200C54EBC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -73,7 +76,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		14644347239E008E00C54EBC /* CopyFiles */ = {
+		14644361239E1F3D00C54EBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1464436C239E1F4600C54EBC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -100,10 +112,12 @@
 		14644330239CFE9900C54EBC /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		14644336239D003400C54EBC /* shaderhelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shaderhelp.h; sourceTree = "<group>"; };
 		14644337239D00F000C54EBC /* glhelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glhelp.h; sourceTree = "<group>"; };
-		1464433C239D567900C54EBC /* TwoTriangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoTriangle; sourceTree = BUILT_PRODUCTS_DIR; };
-		1464433E239D567900C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		14644349239E008E00C54EBC /* CoterminousTriangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoterminousTriangle; sourceTree = BUILT_PRODUCTS_DIR; };
-		1464434B239E008E00C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		14644356239E1EF200C54EBC /* TwoTriangle1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoTriangle1; sourceTree = BUILT_PRODUCTS_DIR; };
+		14644358239E1EF200C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		14644363239E1F3D00C54EBC /* TwoTriangle2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoTriangle2; sourceTree = BUILT_PRODUCTS_DIR; };
+		14644365239E1F3D00C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1464436E239E1F4600C54EBC /* TwoTriangle3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoTriangle3; sourceTree = BUILT_PRODUCTS_DIR; };
+		14644370239E1F4600C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,19 +153,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14644339239D567900C54EBC /* Frameworks */ = {
+		14644353239E1EF200C54EBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14644343239D5BC600C54EBC /* libglfw.3.2.dylib in Frameworks */,
+				1464435E239E1F2700C54EBC /* libglfw.3.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14644346239E008E00C54EBC /* Frameworks */ = {
+		14644360239E1F3D00C54EBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14644350239E00C400C54EBC /* libglfw.3.2.dylib in Frameworks */,
+				14644376239E1F5600C54EBC /* libglfw.3.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464436B239E1F4600C54EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14644377239E1F8900C54EBC /* libglfw.3.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +189,9 @@
 				146442FC239A550A00C54EBC /* HelloWindow */,
 				14644316239A661800C54EBC /* HelloTriangle */,
 				14644328239CFE3F00C54EBC /* HelloRectange */,
-				1464434A239E008E00C54EBC /* CoterminousTriangle */,
-				1464433D239D567900C54EBC /* TwoTriangle */,
+				14644357239E1EF200C54EBC /* TwoTriangle1 */,
+				14644364239E1F3D00C54EBC /* TwoTriangle2 */,
+				1464436F239E1F4600C54EBC /* TwoTriangle3 */,
 				146442E6239A449C00C54EBC /* Products */,
 				146442F1239A490C00C54EBC /* Frameworks */,
 			);
@@ -181,8 +204,9 @@
 				146442FB239A550A00C54EBC /* HelloWindow */,
 				14644315239A661800C54EBC /* HelloTriangle */,
 				14644327239CFE3F00C54EBC /* HelloRectange */,
-				1464433C239D567900C54EBC /* TwoTriangle */,
-				14644349239E008E00C54EBC /* CoterminousTriangle */,
+				14644356239E1EF200C54EBC /* TwoTriangle1 */,
+				14644363239E1F3D00C54EBC /* TwoTriangle2 */,
+				1464436E239E1F4600C54EBC /* TwoTriangle3 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,20 +263,28 @@
 			path = HelloRectange;
 			sourceTree = "<group>";
 		};
-		1464433D239D567900C54EBC /* TwoTriangle */ = {
+		14644357239E1EF200C54EBC /* TwoTriangle1 */ = {
 			isa = PBXGroup;
 			children = (
-				1464433E239D567900C54EBC /* main.cpp */,
+				14644358239E1EF200C54EBC /* main.cpp */,
 			);
-			path = TwoTriangle;
+			path = TwoTriangle1;
 			sourceTree = "<group>";
 		};
-		1464434A239E008E00C54EBC /* CoterminousTriangle */ = {
+		14644364239E1F3D00C54EBC /* TwoTriangle2 */ = {
 			isa = PBXGroup;
 			children = (
-				1464434B239E008E00C54EBC /* main.cpp */,
+				14644365239E1F3D00C54EBC /* main.cpp */,
 			);
-			path = CoterminousTriangle;
+			path = TwoTriangle2;
+			sourceTree = "<group>";
+		};
+		1464436F239E1F4600C54EBC /* TwoTriangle3 */ = {
+			isa = PBXGroup;
+			children = (
+				14644370239E1F4600C54EBC /* main.cpp */,
+			);
+			path = TwoTriangle3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,38 +358,55 @@
 			productReference = 14644327239CFE3F00C54EBC /* HelloRectange */;
 			productType = "com.apple.product-type.tool";
 		};
-		1464433B239D567900C54EBC /* TwoTriangle */ = {
+		14644355239E1EF200C54EBC /* TwoTriangle1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14644340239D567900C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle" */;
+			buildConfigurationList = 1464435A239E1EF200C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle1" */;
 			buildPhases = (
-				14644338239D567900C54EBC /* Sources */,
-				14644339239D567900C54EBC /* Frameworks */,
-				1464433A239D567900C54EBC /* CopyFiles */,
+				14644352239E1EF200C54EBC /* Sources */,
+				14644353239E1EF200C54EBC /* Frameworks */,
+				14644354239E1EF200C54EBC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TwoTriangle;
-			productName = TwoTriangle;
-			productReference = 1464433C239D567900C54EBC /* TwoTriangle */;
+			name = TwoTriangle1;
+			productName = TwoTriangle1;
+			productReference = 14644356239E1EF200C54EBC /* TwoTriangle1 */;
 			productType = "com.apple.product-type.tool";
 		};
-		14644348239E008E00C54EBC /* CoterminousTriangle */ = {
+		14644362239E1F3D00C54EBC /* TwoTriangle2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1464434D239E008E00C54EBC /* Build configuration list for PBXNativeTarget "CoterminousTriangle" */;
+			buildConfigurationList = 14644367239E1F3D00C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle2" */;
 			buildPhases = (
-				14644345239E008E00C54EBC /* Sources */,
-				14644346239E008E00C54EBC /* Frameworks */,
-				14644347239E008E00C54EBC /* CopyFiles */,
+				1464435F239E1F3D00C54EBC /* Sources */,
+				14644360239E1F3D00C54EBC /* Frameworks */,
+				14644361239E1F3D00C54EBC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CoterminousTriangle;
-			productName = CoterminousTriangle;
-			productReference = 14644349239E008E00C54EBC /* CoterminousTriangle */;
+			name = TwoTriangle2;
+			productName = TwoTriangle2;
+			productReference = 14644363239E1F3D00C54EBC /* TwoTriangle2 */;
+			productType = "com.apple.product-type.tool";
+		};
+		1464436D239E1F4600C54EBC /* TwoTriangle3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14644372239E1F4600C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle3" */;
+			buildPhases = (
+				1464436A239E1F4600C54EBC /* Sources */,
+				1464436B239E1F4600C54EBC /* Frameworks */,
+				1464436C239E1F4600C54EBC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwoTriangle3;
+			productName = TwoTriangle3;
+			productReference = 1464436E239E1F4600C54EBC /* TwoTriangle3 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -381,10 +430,13 @@
 					14644326239CFE3F00C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					1464433B239D567900C54EBC = {
+					14644355239E1EF200C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					14644348239E008E00C54EBC = {
+					14644362239E1F3D00C54EBC = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					1464436D239E1F4600C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -406,8 +458,9 @@
 				146442FA239A550A00C54EBC /* HelloWindow */,
 				14644314239A661800C54EBC /* HelloTriangle */,
 				14644326239CFE3F00C54EBC /* HelloRectange */,
-				14644348239E008E00C54EBC /* CoterminousTriangle */,
-				1464433B239D567900C54EBC /* TwoTriangle */,
+				14644355239E1EF200C54EBC /* TwoTriangle1 */,
+				14644362239E1F3D00C54EBC /* TwoTriangle2 */,
+				1464436D239E1F4600C54EBC /* TwoTriangle3 */,
 			);
 		};
 /* End PBXProject section */
@@ -449,21 +502,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14644338239D567900C54EBC /* Sources */ = {
+		14644352239E1EF200C54EBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1464433F239D567900C54EBC /* main.cpp in Sources */,
-				14644344239D5BD100C54EBC /* glad.c in Sources */,
+				1464435D239E1F1B00C54EBC /* glad.c in Sources */,
+				14644359239E1EF200C54EBC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14644345239E008E00C54EBC /* Sources */ = {
+		1464435F239E1F3D00C54EBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1464434C239E008E00C54EBC /* main.cpp in Sources */,
-				14644351239E012200C54EBC /* glad.c in Sources */,
+				14644375239E1F5000C54EBC /* glad.c in Sources */,
+				14644366239E1F3D00C54EBC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464436A239E1F4600C54EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14644378239E1F8F00C54EBC /* glad.c in Sources */,
+				14644371239E1F4600C54EBC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +757,7 @@
 			};
 			name = Release;
 		};
-		14644341239D567900C54EBC /* Debug */ = {
+		1464435B239E1EF200C54EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -708,7 +770,7 @@
 			};
 			name = Debug;
 		};
-		14644342239D567900C54EBC /* Release */ = {
+		1464435C239E1EF200C54EBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -721,13 +783,13 @@
 			};
 			name = Release;
 		};
-		1464434E239E008E00C54EBC /* Debug */ = {
+		14644368239E1F3D00C54EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
 					/usr/local/Cellar/glfw/3.2.1/include/,
+					/usr/local/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,13 +799,45 @@
 			};
 			name = Debug;
 		};
-		1464434F239E008E00C54EBC /* Release */ = {
+		14644369239E1F3D00C54EBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
 					/usr/local/Cellar/glfw/3.2.1/include/,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		14644373239E1F4600C54EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw/3.2.1/include/,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14644374239E1F4600C54EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw/3.2.1/include/,
+					/usr/local/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -801,20 +895,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14644340239D567900C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle" */ = {
+		1464435A239E1EF200C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14644341239D567900C54EBC /* Debug */,
-				14644342239D567900C54EBC /* Release */,
+				1464435B239E1EF200C54EBC /* Debug */,
+				1464435C239E1EF200C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1464434D239E008E00C54EBC /* Build configuration list for PBXNativeTarget "CoterminousTriangle" */ = {
+		14644367239E1F3D00C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1464434E239E008E00C54EBC /* Debug */,
-				1464434F239E008E00C54EBC /* Release */,
+				14644368239E1F3D00C54EBC /* Debug */,
+				14644369239E1F3D00C54EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14644372239E1F4600C54EBC /* Build configuration list for PBXNativeTarget "TwoTriangle3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14644373239E1F4600C54EBC /* Debug */,
+				14644374239E1F4600C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
