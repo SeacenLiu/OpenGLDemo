@@ -74,30 +74,27 @@ int main(int argc, const char * argv[]) {
     GLuint shaderProgram = CreateShaderProgram(vertexShaderSource,
                                                fragmentShaderSource);
     if (!shaderProgram) {
-        std::cout << "着色器程序创建数百" << std::endl;
+        std::cout << "着色器程序创建数失败" << std::endl;
         return -1;
     }
     // --------------- 配置 VBO & VAO ---------------
+    GLuint VBOs[2], VAOs[2];
     // VBO1 & VAO1
-    GLuint VBO1;
-    glGenBuffers(1, &VBO1);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO1);
+    glGenBuffers(1, &VBOs[0]);
+    glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices1), vertices1, GL_STATIC_DRAW);
-    GLuint VAO1;
-    glGenVertexArrays(1, &VAO1);
-    glBindVertexArray(VAO1);
+    glGenVertexArrays(1, &VAOs[0]);
+    glBindVertexArray(VAOs[0]);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
     // VBO2 & VAO2
-    GLuint VBO2;
-    glGenBuffers(1, &VBO2);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+    glGenBuffers(1, &VBOs[1]);
+    glBindBuffer(GL_ARRAY_BUFFER, VBOs[1]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices2), vertices2, GL_STATIC_DRAW);
-    GLuint VAO2;
-    glGenVertexArrays(1, &VAO2);
-    glBindVertexArray(VAO2);
+    glGenVertexArrays(1, &VAOs[1]);
+    glBindVertexArray(VAOs[1]);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -111,9 +108,9 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT);
         // 3. 绘制三角形
         glUseProgram(shaderProgram);
-        glBindVertexArray(VAO1);
+        glBindVertexArray(VAOs[0]);
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(VAO2);
+        glBindVertexArray(VAOs[1]);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         // 4. 交换缓冲
         glfwSwapBuffers(window);
