@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
+		<key>ColorfulTexture.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>ColorfulTriangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -98,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>146443D4239F6F9F00C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146443E423A0151000C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

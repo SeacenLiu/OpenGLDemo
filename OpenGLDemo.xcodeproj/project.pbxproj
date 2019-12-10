@@ -49,6 +49,9 @@
 		146443D8239F6F9F00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146443D7239F6F9F00C54EBC /* main.cpp */; };
 		146443DC239F6FCB00C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		146443DD239F6FD400C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		146443E823A0151000C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146443E723A0151000C54EBC /* main.cpp */; };
+		146443EC23A0155200C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
+		146443ED23A0155700C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -178,6 +181,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		146443E323A0151000C54EBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +239,11 @@
 		146443DE239F741F00C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		146443DF239F741F00C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
 		146443E0239F789300C54EBC /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
+		146443E523A0151000C54EBC /* ColorfulTexture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ColorfulTexture; sourceTree = BUILT_PRODUCTS_DIR; };
+		146443E723A0151000C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		146443EE23A0157D00C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		146443EF23A015CF00C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		146443F023A015CF00C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +359,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		146443E223A0151000C54EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146443EC23A0155200C54EBC /* libglfw.3.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -364,6 +389,7 @@
 				146443B7239E6DE800C54EBC /* HOffsetTriangle */,
 				146443C6239EA9B600C54EBC /* ColorTriangle */,
 				146443D6239F6F9F00C54EBC /* HelloTexture */,
+				146443E623A0151000C54EBC /* ColorfulTexture */,
 				146442E6239A449C00C54EBC /* Products */,
 				146442F1239A490C00C54EBC /* Frameworks */,
 			);
@@ -386,6 +412,7 @@
 				146443B6239E6DE800C54EBC /* HOffsetTriangle */,
 				146443C5239EA9B600C54EBC /* ColorTriangle */,
 				146443D5239F6F9F00C54EBC /* HelloTexture */,
+				146443E523A0151000C54EBC /* ColorfulTexture */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -531,6 +558,17 @@
 				146443DF239F741F00C54EBC /* shader.fs */,
 			);
 			path = HelloTexture;
+			sourceTree = "<group>";
+		};
+		146443E623A0151000C54EBC /* ColorfulTexture */ = {
+			isa = PBXGroup;
+			children = (
+				146443EE23A0157D00C54EBC /* container.jpg */,
+				146443E723A0151000C54EBC /* main.cpp */,
+				146443F023A015CF00C54EBC /* shader.vs */,
+				146443EF23A015CF00C54EBC /* shader.fs */,
+			);
+			path = ColorfulTexture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -774,6 +812,23 @@
 			productReference = 146443D5239F6F9F00C54EBC /* HelloTexture */;
 			productType = "com.apple.product-type.tool";
 		};
+		146443E423A0151000C54EBC /* ColorfulTexture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146443E923A0151000C54EBC /* Build configuration list for PBXNativeTarget "ColorfulTexture" */;
+			buildPhases = (
+				146443E123A0151000C54EBC /* Sources */,
+				146443E223A0151000C54EBC /* Frameworks */,
+				146443E323A0151000C54EBC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorfulTexture;
+			productName = ColorfulTexture;
+			productReference = 146443E523A0151000C54EBC /* ColorfulTexture */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -825,6 +880,9 @@
 					146443D4239F6F9F00C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					146443E423A0151000C54EBC = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 146442E0239A449C00C54EBC /* Build configuration list for PBXProject "OpenGLDemo" */;
@@ -854,6 +912,7 @@
 				146443B5239E6DE800C54EBC /* HOffsetTriangle */,
 				146443C4239EA9B600C54EBC /* ColorTriangle */,
 				146443D4239F6F9F00C54EBC /* HelloTexture */,
+				146443E423A0151000C54EBC /* ColorfulTexture */,
 			);
 		};
 /* End PBXProject section */
@@ -982,6 +1041,15 @@
 			files = (
 				146443DD239F6FD400C54EBC /* glad.c in Sources */,
 				146443D8239F6F9F00C54EBC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146443E123A0151000C54EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146443ED23A0155700C54EBC /* glad.c in Sources */,
+				146443E823A0151000C54EBC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1507,6 +1575,32 @@
 			};
 			name = Release;
 		};
+		146443EA23A0151000C54EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/glfw/3.2.1/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		146443EB23A0151000C54EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/glfw/3.2.1/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1641,6 +1735,15 @@
 			buildConfigurations = (
 				146443DA239F6F9F00C54EBC /* Debug */,
 				146443DB239F6F9F00C54EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146443E923A0151000C54EBC /* Build configuration list for PBXNativeTarget "ColorfulTexture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146443EA23A0151000C54EBC /* Debug */,
+				146443EB23A0151000C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

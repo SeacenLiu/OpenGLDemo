@@ -1,14 +1,15 @@
 //
 //  main.cpp
-//  HelloTexture
+//  ColorfulTexture
 //
-//  Created by SeacenLiu on 2019/12/10.
+//  Created by SeacenLiu on 2019/12/11.
 //  Copyright © 2019 SeacenLiu. All rights reserved.
 //
 
 /**
- * https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures
- * 基本的展示2D图像材质
+ * 颜色纹理与2D纹理混合的效果
+ * 顶点着色器传颜色数据，片元着色器通过“材质 * 颜色”进行混合
+ * FragColor = texture(ourTexture, TexCoord) * vec4(ourColor, 1.0f);
  */
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -97,7 +98,7 @@ int main(int argc, const char * argv[]) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     // 加载并生成纹理
     int width, height, nrChannels;
-    unsigned char *data = stbi_load("./wall.jpg",  // 图片路径
+    unsigned char *data = stbi_load("./container.jpg",  // 图片路径
                                     &width,        // 图片宽度返回地址
                                     &height,       // 图片高度返回地址
                                     &nrChannels,   // 颜色通道个数返回地址
