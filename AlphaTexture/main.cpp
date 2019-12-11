@@ -1,15 +1,14 @@
 //
 //  main.cpp
-//  SmileTexture
+//  AlphaTexture
 //
 //  Created by SeacenLiu on 2019/12/11.
 //  Copyright © 2019 SeacenLiu. All rights reserved.
 //
 
 /**
- * 练习一:(https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/#_9)
- * 修改片段着色器，仅让笑脸图案朝另一个方向看
- * （单纯改变朝向只要改变纹理顶点坐标）
+ * 练习四:(https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#_8)
+ * 使用一个uniform变量作为mix函数的第三个参数来改变两个纹理可见度，使用上和下键来改变箱子或笑脸的可见度
  */
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -36,6 +35,9 @@ unsigned int indices[] = {
     1, 2, 3  // 左上三角形
 };
 
+// 片元着色器中 showProportion 的值
+float showProportion = 1;
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
@@ -45,7 +47,7 @@ int main(int argc, const char * argv[]) {
     // --------------- 创建窗口 ---------------
     GLFWwindow *window = glfwCreateWindow(SCR_WIDTH,
                                           SCR_HEIGHT,
-                                          "Smile Texture",
+                                          "Alpha Texture",
                                           NULL,
                                           NULL);
     if (window == NULL) {
@@ -153,6 +155,9 @@ int main(int argc, const char * argv[]) {
     ourShader.use();
     glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0); // 手动设置
     ourShader.setInt("texture2", 1); // 使用着色器类设置
+    // --------------- 渲染占比设置 ---------------
+    ourShader.use();
+    ourShader.setFloat("showProportion", showProportion);
     // -----------------------------------------------------------------------
     // --------------- 渲染循环 ---------------
     while (!glfwWindowShouldClose(window)) {
@@ -169,11 +174,13 @@ int main(int argc, const char * argv[]) {
         glBindTexture(GL_TEXTURE_2D, texture2);
         // 3-2: 激活着色器程序
         ourShader.use();
-        // 3-3: 绑定 VAO
+        // 3-3: 修改占比值
+        ourShader.setFloat("showProportion", showProportion);
+        // 3-4: 绑定 VAO
         glBindVertexArray(VAO);
-        // 3-4: 绑定 EBO
+        // 3-5: 绑定 EBO
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        // 3-5: 绘制顶点索引
+        // 3-6: 绘制顶点索引
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         // 4. 交换缓冲
         glfwSwapBuffers(window);
@@ -193,4 +200,12 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+        showProportion += 0.01;
+        showProportion = showProportion > 1 ? 1 : showProportion;
+    }
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+        showProportion -= 0.01;
+        showProportion = showProportion < 0 ? 0 : showProportion;
+    }
 }
