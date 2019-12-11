@@ -1,18 +1,18 @@
 //
 //  main.cpp
-//  CornerTexture
+//  PixelTexture
 //
 //  Created by SeacenLiu on 2019/12/11.
 //  Copyright © 2019 SeacenLiu. All rights reserved.
 //
 
 /**
- * 练习二:(https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/#_9)
- * 尝试用不同的纹理环绕方式，设定一个从0.0f到2.0f范围内的（而不是原来的0.0f到1.0f）纹理坐标。
- * 试试看能不能在箱子的角落放置4个笑脸
- * 记得一定要试试其它的环绕方式
+ * 练习三:(https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#_8)
+ * 尝试在矩形上只显示纹理图像的中间一部分，修改纹理坐标，达到能看见单个的像素的效果。
+ * 尝试使用GL_NEAREST的纹理过滤方式让像素显示得更清晰
  *
- * 纹理坐标修改为(0,2)后，纹理将无法直接铺满，而是使用填充模式进行填满（以左下角为中点，超出则采用特定格式）
+ * 纹理坐标两端修改为距离小于 1，即可展示区域内的像素
+ * 过滤方式修改为 GL_NEAREST 会使像素提取更加独立，展现像素风
  *
  */
 
@@ -29,10 +29,10 @@ const unsigned int SCR_HEIGHT = 600;
 
 float vertices[] = {
 //     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
-     0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   2.0f, 2.0f,   // 右上
-     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   2.0f, 0.0f,   // 右下
-    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // 左下
-    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 2.0f    // 左上
+     0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   0.55f, 0.55f,   // 右上
+     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   0.55f, 0.45f,   // 右下
+    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.45f, 0.45f,   // 左下
+    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.45f, 0.55f    // 左上
 };
 
 unsigned int indices[] = {
@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
     // --------------- 创建窗口 ---------------
     GLFWwindow *window = glfwCreateWindow(SCR_WIDTH,
                                           SCR_HEIGHT,
-                                          "Corner Texture",
+                                          "Pixel Texture",
                                           NULL,
                                           NULL);
     if (window == NULL) {
@@ -100,8 +100,8 @@ int main(int argc, const char * argv[]) {
     glBindTexture(GL_TEXTURE_2D, texture1);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     stbi_set_flip_vertically_on_load(true);
     data = stbi_load("./container.jpg",  // 图片路径
                                     &width,        // 图片宽度返回地址

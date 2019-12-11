@@ -74,6 +74,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>PixelTexture.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
 		<key>RedTriangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -138,6 +143,11 @@
 			<true/>
 		</dict>
 		<key>1464441623A121D500C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1464442723A131A700C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
