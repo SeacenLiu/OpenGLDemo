@@ -74,6 +74,11 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>SmileTexture.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>TwoTriangle1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -118,6 +123,11 @@
 			<true/>
 		</dict>
 		<key>146443F423A016CB00C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1464440523A09DE800C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

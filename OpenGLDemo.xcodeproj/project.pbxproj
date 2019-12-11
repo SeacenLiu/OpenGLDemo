@@ -55,6 +55,9 @@
 		146443F823A016CB00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146443F723A016CB00C54EBC /* main.cpp */; };
 		146443FC23A016D600C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		146443FD23A016DB00C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		1464440923A09DE800C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464440823A09DE800C54EBC /* main.cpp */; };
+		1464440D23A09E5000C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		1464440E23A09E5500C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -202,6 +205,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		1464440423A09DE800C54EBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +274,11 @@
 		146443FF23A0172300C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		1464440023A0172E00C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 		1464440123A0174700C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		1464440623A09DE800C54EBC /* SmileTexture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SmileTexture; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464440823A09DE800C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1464440F23A09E9000C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		1464441023A09E9000C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		1464441123A09EAC00C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +410,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1464440323A09DE800C54EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464440E23A09E5500C54EBC /* libglfw.3.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -417,6 +442,7 @@
 				146443D6239F6F9F00C54EBC /* HelloTexture */,
 				146443E623A0151000C54EBC /* ColorfulTexture */,
 				146443F623A016CB00C54EBC /* MixTexture */,
+				1464440723A09DE800C54EBC /* SmileTexture */,
 				146442E6239A449C00C54EBC /* Products */,
 				146442F1239A490C00C54EBC /* Frameworks */,
 			);
@@ -441,6 +467,7 @@
 				146443D5239F6F9F00C54EBC /* HelloTexture */,
 				146443E523A0151000C54EBC /* ColorfulTexture */,
 				146443F523A016CB00C54EBC /* MixTexture */,
+				1464440623A09DE800C54EBC /* SmileTexture */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -609,6 +636,17 @@
 				146443FE23A0172300C54EBC /* shader.fs */,
 			);
 			path = MixTexture;
+			sourceTree = "<group>";
+		};
+		1464440723A09DE800C54EBC /* SmileTexture */ = {
+			isa = PBXGroup;
+			children = (
+				1464441123A09EAC00C54EBC /* awesomeface.png */,
+				1464440823A09DE800C54EBC /* main.cpp */,
+				1464440F23A09E9000C54EBC /* shader.vs */,
+				1464441023A09E9000C54EBC /* shader.fs */,
+			);
+			path = SmileTexture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -886,6 +924,23 @@
 			productReference = 146443F523A016CB00C54EBC /* MixTexture */;
 			productType = "com.apple.product-type.tool";
 		};
+		1464440523A09DE800C54EBC /* SmileTexture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1464440A23A09DE800C54EBC /* Build configuration list for PBXNativeTarget "SmileTexture" */;
+			buildPhases = (
+				1464440223A09DE800C54EBC /* Sources */,
+				1464440323A09DE800C54EBC /* Frameworks */,
+				1464440423A09DE800C54EBC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmileTexture;
+			productName = SmileTexture;
+			productReference = 1464440623A09DE800C54EBC /* SmileTexture */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -943,6 +998,9 @@
 					146443F423A016CB00C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					1464440523A09DE800C54EBC = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 146442E0239A449C00C54EBC /* Build configuration list for PBXProject "OpenGLDemo" */;
@@ -974,6 +1032,7 @@
 				146443D4239F6F9F00C54EBC /* HelloTexture */,
 				146443E423A0151000C54EBC /* ColorfulTexture */,
 				146443F423A016CB00C54EBC /* MixTexture */,
+				1464440523A09DE800C54EBC /* SmileTexture */,
 			);
 		};
 /* End PBXProject section */
@@ -1120,6 +1179,15 @@
 			files = (
 				146443FD23A016DB00C54EBC /* glad.c in Sources */,
 				146443F823A016CB00C54EBC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464440223A09DE800C54EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464440D23A09E5000C54EBC /* glad.c in Sources */,
+				1464440923A09DE800C54EBC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1703,6 +1771,32 @@
 			};
 			name = Release;
 		};
+		1464440B23A09DE800C54EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/glfw/3.2.1/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1464440C23A09DE800C54EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/glfw/3.2.1/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1855,6 +1949,15 @@
 			buildConfigurations = (
 				146443FA23A016CB00C54EBC /* Debug */,
 				146443FB23A016CB00C54EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1464440A23A09DE800C54EBC /* Build configuration list for PBXNativeTarget "SmileTexture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464440B23A09DE800C54EBC /* Debug */,
+				1464440C23A09DE800C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
