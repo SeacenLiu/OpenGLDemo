@@ -279,6 +279,7 @@
 		1464440F23A09E9000C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		1464441023A09E9000C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
 		1464441123A09EAC00C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		1464441223A120EA00C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -642,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				1464441123A09EAC00C54EBC /* awesomeface.png */,
+				1464441223A120EA00C54EBC /* container.jpg */,
 				1464440823A09DE800C54EBC /* main.cpp */,
 				1464440F23A09E9000C54EBC /* shader.vs */,
 				1464441023A09E9000C54EBC /* shader.fs */,
