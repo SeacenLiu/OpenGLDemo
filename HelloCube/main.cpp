@@ -233,7 +233,10 @@ int main(int argc, const char * argv[]) {
         view = glm::translate(view, glm::vec3(0, 0, -3.0));
         // 投影矩阵 - 3D 变 2D 变换
         glm::mat4 projection = glm::mat4(1.0f);
-        projection = glm::perspective(glm::radians(45.0f), ((float)SCR_WIDTH / (float)SCR_HEIGHT), 0.1f, 100.0f);
+        projection = glm::perspective(glm::radians(45.0f),                     // FoV角，越大视野越大
+                                      ((float)SCR_WIDTH / (float)SCR_HEIGHT),  // 屏幕拉伸比例，一般和视图比例相同即可，大了会被左右压扁，小了会被上下压扁
+                                      0.1f,                                    // 近平面距离
+                                      100.0f);                                 // 远平面距离
         // 设置 uniform 属性
         ourShader.setMat4("view", view);
         ourShader.setMat4("projection", projection);
