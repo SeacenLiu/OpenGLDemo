@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>Hello3DTransform.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
 		<key>HelloRectange.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -188,6 +193,11 @@
 			<true/>
 		</dict>
 		<key>1464446C23A1F1D700C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1464448423A29A0000C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
