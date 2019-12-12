@@ -49,6 +49,11 @@
 			<key>orderHint</key>
 			<integer>23</integer>
 		</dict>
+		<key>HelloCube.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
 		<key>HelloRectange.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -198,6 +203,11 @@
 			<true/>
 		</dict>
 		<key>1464448423A29A0000C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1464449523A2A30D00C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
