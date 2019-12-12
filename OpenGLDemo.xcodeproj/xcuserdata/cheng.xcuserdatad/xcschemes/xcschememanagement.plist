@@ -104,6 +104,11 @@
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
+		<key>TwoTransform.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
 		<key>TwoTriangle1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -178,6 +183,11 @@
 			<true/>
 		</dict>
 		<key>1464445A23A1ED1C00C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1464446C23A1F1D700C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

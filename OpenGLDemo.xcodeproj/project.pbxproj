@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		146442E9239A449C00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146442E8239A449C00C54EBC /* main.cpp */; };
-		146442F6239A52B200C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 146442F2239A490C00C54EBC /* libglfw.3.2.dylib */; };
 		146442FE239A550A00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146442FD239A550A00C54EBC /* main.cpp */; };
-		1464430D239A559100C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 146442F2239A490C00C54EBC /* libglfw.3.2.dylib */; };
 		14644318239A661800C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14644317239A661800C54EBC /* main.cpp */; };
 		1464431F239A66DF00C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		1464432A239CFE3F00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14644329239CFE3F00C54EBC /* main.cpp */; };
@@ -73,6 +71,9 @@
 		1464445E23A1ED1C00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464445D23A1ED1C00C54EBC /* main.cpp */; };
 		1464446223A1ED2400C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		1464446323A1ED2700C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		1464447723A1F21600C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
+		1464447823A1F21B00C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		1464448023A1F26A00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464447D23A1F26A00C54EBC /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -274,12 +275,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		1464446B23A1F1D700C54EBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		146442E5239A449C00C54EBC /* OpenGLDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		146442E8239A449C00C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		146442F2239A490C00C54EBC /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		146442FB239A550A00C54EBC /* HelloWindow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWindow; sourceTree = BUILT_PRODUCTS_DIR; };
 		146442FD239A550A00C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		14644315239A661800C54EBC /* HelloTriangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloTriangle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +379,12 @@
 		1464446623A1ED7800C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
 		1464446723A1ED7800C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		1464446823A1EFE000C54EBC /* EnvironmentConfig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnvironmentConfig.png; sourceTree = "<group>"; };
+		1464446D23A1F1D700C54EBC /* TwoTransform */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoTransform; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464447B23A1F26A00C54EBC /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		1464447C23A1F26A00C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		1464447D23A1F26A00C54EBC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1464447E23A1F26A00C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		1464447F23A1F26A00C54EBC /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,7 +392,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146442F6239A52B200C54EBC /* libglfw.3.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +399,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1464430D239A559100C54EBC /* libglfw.3.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +562,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1464446A23A1F1D700C54EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464447723A1F21600C54EBC /* libglfw.3.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -579,6 +600,7 @@
 				1464443A23A1374000C54EBC /* AlphaTexture */,
 				1464444B23A1E82A00C54EBC /* HelloTransform */,
 				1464445C23A1ED1C00C54EBC /* RotatingTransform */,
+				1464446E23A1F1D700C54EBC /* TwoTransform */,
 				146442E6239A449C00C54EBC /* Products */,
 				146442F1239A490C00C54EBC /* Frameworks */,
 			);
@@ -609,6 +631,7 @@
 				1464443923A1374000C54EBC /* AlphaTexture */,
 				1464444A23A1E82A00C54EBC /* HelloTransform */,
 				1464445B23A1ED1C00C54EBC /* RotatingTransform */,
+				1464446D23A1F1D700C54EBC /* TwoTransform */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -630,7 +653,6 @@
 			isa = PBXGroup;
 			children = (
 				1464431C239A664700C54EBC /* libglfw.3.2.dylib */,
-				146442F2239A490C00C54EBC /* libglfw.3.2.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -849,6 +871,18 @@
 				1464446623A1ED7800C54EBC /* shader.fs */,
 			);
 			path = RotatingTransform;
+			sourceTree = "<group>";
+		};
+		1464446E23A1F1D700C54EBC /* TwoTransform */ = {
+			isa = PBXGroup;
+			children = (
+				1464447E23A1F26A00C54EBC /* awesomeface.png */,
+				1464447C23A1F26A00C54EBC /* container.jpg */,
+				1464447D23A1F26A00C54EBC /* main.cpp */,
+				1464447B23A1F26A00C54EBC /* shader.vs */,
+				1464447F23A1F26A00C54EBC /* shader.fs */,
+			);
+			path = TwoTransform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1228,6 +1262,23 @@
 			productReference = 1464445B23A1ED1C00C54EBC /* RotatingTransform */;
 			productType = "com.apple.product-type.tool";
 		};
+		1464446C23A1F1D700C54EBC /* TwoTransform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1464447123A1F1D700C54EBC /* Build configuration list for PBXNativeTarget "TwoTransform" */;
+			buildPhases = (
+				1464446923A1F1D700C54EBC /* Sources */,
+				1464446A23A1F1D700C54EBC /* Frameworks */,
+				1464446B23A1F1D700C54EBC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwoTransform;
+			productName = TwoTransform;
+			productReference = 1464446D23A1F1D700C54EBC /* TwoTransform */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1303,6 +1354,9 @@
 					1464445A23A1ED1C00C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					1464446C23A1F1D700C54EBC = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 146442E0239A449C00C54EBC /* Build configuration list for PBXProject "OpenGLDemo" */;
@@ -1340,6 +1394,7 @@
 				1464443823A1374000C54EBC /* AlphaTexture */,
 				1464444923A1E82A00C54EBC /* HelloTransform */,
 				1464445A23A1ED1C00C54EBC /* RotatingTransform */,
+				1464446C23A1F1D700C54EBC /* TwoTransform */,
 			);
 		};
 /* End PBXProject section */
@@ -1540,6 +1595,15 @@
 			files = (
 				1464446323A1ED2700C54EBC /* glad.c in Sources */,
 				1464445E23A1ED1C00C54EBC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464446923A1F1D700C54EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464448023A1F26A00C54EBC /* main.cpp in Sources */,
+				1464447823A1F21B00C54EBC /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2297,6 +2361,38 @@
 			};
 			name = Release;
 		};
+		1464447223A1F1D700C54EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1464447323A1F1D700C54EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2503,6 +2599,15 @@
 			buildConfigurations = (
 				1464446023A1ED1C00C54EBC /* Debug */,
 				1464446123A1ED1C00C54EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1464447123A1F1D700C54EBC /* Build configuration list for PBXNativeTarget "TwoTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464447223A1F1D700C54EBC /* Debug */,
+				1464447323A1F1D700C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

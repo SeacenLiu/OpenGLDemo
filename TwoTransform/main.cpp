@@ -1,13 +1,19 @@
 //
 //  main.cpp
-//  RotatingTransform
+//  TwoTransform
 //
-//  Created by SeacenLiu on 2019/12/12.
+//  Created by SeacenLiu on 2019/12/11.
 //  Copyright © 2019 SeacenLiu. All rights reserved.
 //
 
 /**
- * 使用矩阵进行位移，并根据时间进行旋转
+ * 练习一:(https://learnopengl-cn.github.io/01%20Getting%20started/07%20Transformations/#_21)
+ * 尝试再次调用glDrawElements画出第二个箱子，只使用变换将其摆放在不同的位置。
+ * 让这个箱子被摆放在窗口的左上角，并且会不断的缩放（而不是旋转）。
+ * （sin函数在这里会很有用，不过注意使用sin函数时应用负值会导致物体被翻转）
+ *
+ * 修改 uniform 再调用 glDrawElements 即可在一次渲染中绘制多个图形
+ *
  */
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -173,20 +179,8 @@ int main(int argc, const char * argv[]) {
         ourShader.use();
         
         // -------------------------------------------------------
-        /** 3-3: 矩阵位移+旋转
-         * 1. 先位移后旋转 - 以(0.5,-0.5)为圆心旋转
-         * 2. 先旋转后位移 - 以(0,0)为圆心旋转
-         *
-         * 矩阵变换建议: 1.缩放 2. 旋转 3. 位移 (具体看需求)
-         */
+        // 3-3: 矩阵变换
         glm::mat4 trans;
-        /** 1. 先位移后旋转
-         * trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
-         * trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0,0,1));
-         */
-        // 2. 先旋转后位移
-        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0,0,1));
-        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
         unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
         glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
         // -------------------------------------------------------
@@ -197,6 +191,19 @@ int main(int argc, const char * argv[]) {
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         // 3-6: 绘制顶点索引
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        
+        // --------------------------------------------------------
+        // 画第二个箱子
+        ourShader.use();
+        glm::mat4 trans2;
+        float scaleValue = abs(sin(glfwGetTime()));
+        trans2 = glm::translate(trans2, glm::vec3(-0.5, 0.5, 0));
+        trans2 = glm::scale(trans2, glm::vec3(scaleValue, scaleValue, 1));
+        unsigned int transformLoc2 = glGetUniformLocation(ourShader.ID, "transform");
+        glUniformMatrix4fv(transformLoc2, 1, GL_FALSE, glm::value_ptr(trans2));
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        // --------------------------------------------------------
+        
         // 4. 交换缓冲
         glfwSwapBuffers(window);
         // 5. 处理事件
