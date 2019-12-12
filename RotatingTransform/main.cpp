@@ -173,10 +173,20 @@ int main(int argc, const char * argv[]) {
         ourShader.use();
         
         // -------------------------------------------------------
-        // 3-3: 矩阵旋转
+        /** 3-3: 矩阵位移+旋转
+         * 1. 先位移后旋转 - 以(0.5,-0.5)为圆心旋转
+         * 2. 先旋转后位移 - 以(0,0)为圆心旋转
+         *
+         * 矩阵变换建议: 1.缩放 2. 旋转 3. 位移 (具体看需求)
+         */
         glm::mat4 trans;
-        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+        /** 1. 先位移后旋转
+         * trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+         * trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0,0,1));
+         */
+        // 2. 先旋转后位移
         trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0,0,1));
+        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
         unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
         glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
         // -------------------------------------------------------
