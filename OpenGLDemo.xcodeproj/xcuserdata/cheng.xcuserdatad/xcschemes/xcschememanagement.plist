@@ -54,6 +54,11 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
+		<key>HelloTransform.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>HelloTriangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -158,6 +163,11 @@
 			<true/>
 		</dict>
 		<key>1464443823A1374000C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1464444923A1E82A00C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
