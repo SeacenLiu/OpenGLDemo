@@ -70,6 +70,9 @@
 		1464444D23A1E82A00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464444C23A1E82A00C54EBC /* main.cpp */; };
 		1464445123A1E86200C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		1464445223A1E86900C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		1464445E23A1ED1C00C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1464445D23A1ED1C00C54EBC /* main.cpp */; };
+		1464446223A1ED2400C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
+		1464446323A1ED2700C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -262,6 +265,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		1464445923A1ED1C00C54EBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -352,6 +364,12 @@
 		1464445423A1E8DE00C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
 		1464445523A1E8DF00C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 		1464445623A1E8DF00C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		1464445B23A1ED1C00C54EBC /* RotatingTransform */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RotatingTransform; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464445D23A1ED1C00C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1464446423A1ED7800C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		1464446523A1ED7800C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		1464446623A1ED7800C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		1464446723A1ED7800C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +541,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1464445823A1ED1C00C54EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464446223A1ED2400C54EBC /* libglfw.3.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -552,6 +578,7 @@
 				1464442923A131A700C54EBC /* PixelTexture */,
 				1464443A23A1374000C54EBC /* AlphaTexture */,
 				1464444B23A1E82A00C54EBC /* HelloTransform */,
+				1464445C23A1ED1C00C54EBC /* RotatingTransform */,
 				146442E6239A449C00C54EBC /* Products */,
 				146442F1239A490C00C54EBC /* Frameworks */,
 			);
@@ -581,6 +608,7 @@
 				1464442823A131A700C54EBC /* PixelTexture */,
 				1464443923A1374000C54EBC /* AlphaTexture */,
 				1464444A23A1E82A00C54EBC /* HelloTransform */,
+				1464445B23A1ED1C00C54EBC /* RotatingTransform */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -809,6 +837,18 @@
 				1464445423A1E8DE00C54EBC /* shader.fs */,
 			);
 			path = HelloTransform;
+			sourceTree = "<group>";
+		};
+		1464445C23A1ED1C00C54EBC /* RotatingTransform */ = {
+			isa = PBXGroup;
+			children = (
+				1464446723A1ED7800C54EBC /* awesomeface.png */,
+				1464446523A1ED7800C54EBC /* container.jpg */,
+				1464445D23A1ED1C00C54EBC /* main.cpp */,
+				1464446423A1ED7800C54EBC /* shader.vs */,
+				1464446623A1ED7800C54EBC /* shader.fs */,
+			);
+			path = RotatingTransform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1171,6 +1211,23 @@
 			productReference = 1464444A23A1E82A00C54EBC /* HelloTransform */;
 			productType = "com.apple.product-type.tool";
 		};
+		1464445A23A1ED1C00C54EBC /* RotatingTransform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1464445F23A1ED1C00C54EBC /* Build configuration list for PBXNativeTarget "RotatingTransform" */;
+			buildPhases = (
+				1464445723A1ED1C00C54EBC /* Sources */,
+				1464445823A1ED1C00C54EBC /* Frameworks */,
+				1464445923A1ED1C00C54EBC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RotatingTransform;
+			productName = RotatingTransform;
+			productReference = 1464445B23A1ED1C00C54EBC /* RotatingTransform */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1243,6 +1300,9 @@
 					1464444923A1E82A00C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					1464445A23A1ED1C00C54EBC = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 146442E0239A449C00C54EBC /* Build configuration list for PBXProject "OpenGLDemo" */;
@@ -1279,6 +1339,7 @@
 				1464442723A131A700C54EBC /* PixelTexture */,
 				1464443823A1374000C54EBC /* AlphaTexture */,
 				1464444923A1E82A00C54EBC /* HelloTransform */,
+				1464445A23A1ED1C00C54EBC /* RotatingTransform */,
 			);
 		};
 /* End PBXProject section */
@@ -1470,6 +1531,15 @@
 			files = (
 				1464445223A1E86900C54EBC /* glad.c in Sources */,
 				1464444D23A1E82A00C54EBC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464445723A1ED1C00C54EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464446323A1ED2700C54EBC /* glad.c in Sources */,
+				1464445E23A1ED1C00C54EBC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2195,6 +2265,38 @@
 			};
 			name = Release;
 		};
+		1464446023A1ED1C00C54EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1464446123A1ED1C00C54EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2392,6 +2494,15 @@
 			buildConfigurations = (
 				1464444F23A1E82A00C54EBC /* Debug */,
 				1464445023A1E82A00C54EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1464445F23A1ED1C00C54EBC /* Build configuration list for PBXNativeTarget "RotatingTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464446023A1ED1C00C54EBC /* Debug */,
+				1464446123A1ED1C00C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
