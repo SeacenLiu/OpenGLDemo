@@ -83,6 +83,9 @@
 		146444AA23A3904900C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146444A923A3904900C54EBC /* main.cpp */; };
 		146444AE23A3906F00C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 		146444AF23A3907700C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		146444BB23A393C900C54EBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146444BA23A393C900C54EBC /* main.cpp */; };
+		146444BF23A393CF00C54EBC /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 14644330239CFE9900C54EBC /* glad.c */; };
+		146444C023A393D600C54EBC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1464431C239A664700C54EBC /* libglfw.3.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -320,6 +323,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		146444B623A393C900C54EBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -439,6 +451,12 @@
 		146444B123A390BA00C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		146444B223A390BA00C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 		146444B323A390BA00C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		146444B823A393C900C54EBC /* FreeMoveCamera */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FreeMoveCamera; sourceTree = BUILT_PRODUCTS_DIR; };
+		146444BA23A393C900C54EBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		146444C123A3964600C54EBC /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		146444C223A3964600C54EBC /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		146444C323A3964600C54EBC /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		146444C423A3964600C54EBC /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +666,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		146444B523A393C900C54EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146444C023A393D600C54EBC /* libglfw.3.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -682,6 +708,7 @@
 				1464448623A29A0000C54EBC /* Hello3DTransform */,
 				1464449723A2A30D00C54EBC /* HelloCube */,
 				146444A823A3904900C54EBC /* HelloLookAt */,
+				146444B923A393C900C54EBC /* FreeMoveCamera */,
 				146442E6239A449C00C54EBC /* Products */,
 				146442F1239A490C00C54EBC /* Frameworks */,
 			);
@@ -716,6 +743,7 @@
 				1464448523A29A0000C54EBC /* Hello3DTransform */,
 				1464449623A2A30D00C54EBC /* HelloCube */,
 				146444A723A3904900C54EBC /* HelloLookAt */,
+				146444B823A393C900C54EBC /* FreeMoveCamera */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1003,6 +1031,18 @@
 				146444B023A390BA00C54EBC /* shader.fs */,
 			);
 			path = HelloLookAt;
+			sourceTree = "<group>";
+		};
+		146444B923A393C900C54EBC /* FreeMoveCamera */ = {
+			isa = PBXGroup;
+			children = (
+				146444C423A3964600C54EBC /* awesomeface.png */,
+				146444C223A3964600C54EBC /* container.jpg */,
+				146444BA23A393C900C54EBC /* main.cpp */,
+				146444C323A3964600C54EBC /* shader.vs */,
+				146444C123A3964600C54EBC /* shader.fs */,
+			);
+			path = FreeMoveCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1450,6 +1490,23 @@
 			productReference = 146444A723A3904900C54EBC /* HelloLookAt */;
 			productType = "com.apple.product-type.tool";
 		};
+		146444B723A393C900C54EBC /* FreeMoveCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146444BC23A393C900C54EBC /* Build configuration list for PBXNativeTarget "FreeMoveCamera" */;
+			buildPhases = (
+				146444B423A393C900C54EBC /* Sources */,
+				146444B523A393C900C54EBC /* Frameworks */,
+				146444B623A393C900C54EBC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeMoveCamera;
+			productName = FreeMoveCamera;
+			productReference = 146444B823A393C900C54EBC /* FreeMoveCamera */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1537,6 +1594,9 @@
 					146444A623A3904900C54EBC = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					146444B723A393C900C54EBC = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 146442E0239A449C00C54EBC /* Build configuration list for PBXProject "OpenGLDemo" */;
@@ -1578,6 +1638,7 @@
 				1464448423A29A0000C54EBC /* Hello3DTransform */,
 				1464449523A2A30D00C54EBC /* HelloCube */,
 				146444A623A3904900C54EBC /* HelloLookAt */,
+				146444B723A393C900C54EBC /* FreeMoveCamera */,
 			);
 		};
 /* End PBXProject section */
@@ -1814,6 +1875,15 @@
 			files = (
 				146444AF23A3907700C54EBC /* glad.c in Sources */,
 				146444AA23A3904900C54EBC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146444B423A393C900C54EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146444BF23A393CF00C54EBC /* glad.c in Sources */,
+				146444BB23A393C900C54EBC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2687,6 +2757,38 @@
 			};
 			name = Release;
 		};
+		146444BD23A393C900C54EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		146444BE23A393C900C54EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw/3.2.1/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2929,6 +3031,15 @@
 			buildConfigurations = (
 				146444AC23A3904900C54EBC /* Debug */,
 				146444AD23A3904900C54EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146444BC23A393C900C54EBC /* Build configuration list for PBXNativeTarget "FreeMoveCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146444BD23A393C900C54EBC /* Debug */,
+				146444BE23A393C900C54EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

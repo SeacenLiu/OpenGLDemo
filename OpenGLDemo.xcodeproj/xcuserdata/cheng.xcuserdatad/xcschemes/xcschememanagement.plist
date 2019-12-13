@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>FreeMoveCamera.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>26</integer>
+		</dict>
 		<key>GreenTriangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -218,6 +223,11 @@
 			<true/>
 		</dict>
 		<key>146444A623A3904900C54EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146444B723A393C900C54EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
