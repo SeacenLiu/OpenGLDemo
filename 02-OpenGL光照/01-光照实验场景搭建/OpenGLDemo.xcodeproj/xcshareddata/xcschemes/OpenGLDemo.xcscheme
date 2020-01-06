@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "146444B723A393C900C54EBC"
-               BuildableName = "FreeMoveCamera"
-               BlueprintName = "FreeMoveCamera"
+               BlueprintIdentifier = "1499C08223C303F400E63A40"
+               BuildableName = "OpenGLDemo"
+               BlueprintName = "OpenGLDemo"
                ReferencedContainer = "container:OpenGLDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -36,7 +36,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/cheng/Desktop/SeacenLiu/OpenGLDemo/01-OpenGL&#x5165;&#x95e8;/FreeMoveCamera"
+      customWorkingDirectory = "/Users/cheng/Desktop/SeacenLiu/OpenGLDemo/02-OpenGL&#x5149;&#x7167;/01-&#x5149;&#x7167;&#x5b9e;&#x9a8c;&#x573a;&#x666f;&#x642d;&#x5efa;/OpenGLDemo"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -45,9 +45,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "146444B723A393C900C54EBC"
-            BuildableName = "FreeMoveCamera"
-            BlueprintName = "FreeMoveCamera"
+            BlueprintIdentifier = "1499C08223C303F400E63A40"
+            BuildableName = "OpenGLDemo"
+            BlueprintName = "OpenGLDemo"
             ReferencedContainer = "container:OpenGLDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,9 +62,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "146444B723A393C900C54EBC"
-            BuildableName = "FreeMoveCamera"
-            BlueprintName = "FreeMoveCamera"
+            BlueprintIdentifier = "1499C08223C303F400E63A40"
+            BuildableName = "OpenGLDemo"
+            BlueprintName = "OpenGLDemo"
             ReferencedContainer = "container:OpenGLDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
