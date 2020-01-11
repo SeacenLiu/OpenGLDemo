@@ -29,7 +29,7 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 // 相机
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+Camera camera(glm::vec3(0.0f, 0.0f, 6.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -155,8 +155,7 @@ int main(int argc, const char * argv[]) {
     glEnableVertexAttribArray(0);
     
     // --------------- 渲染循环 ---------------
-    while (!glfwWindowShouldClose(window))
-    {
+    while (!glfwWindowShouldClose(window)) {
         // 0: 每一帧的时间逻辑(用于进行性能监控)
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
@@ -187,6 +186,7 @@ int main(int argc, const char * argv[]) {
         lightingShader.setMat4("view", view);
         // 3-6: 配置模型矩阵
         glm::mat4 model = glm::mat4(1.0f);
+        model = rotate(model, (float)glfwGetTime(), glm::vec3(1.0f, 1.0f, 1.0f));
         lightingShader.setMat4("model", model);
 
         // 4: 渲染反光物体

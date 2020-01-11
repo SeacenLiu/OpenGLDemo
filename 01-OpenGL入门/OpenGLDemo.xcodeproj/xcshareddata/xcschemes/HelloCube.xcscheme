@@ -36,7 +36,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/cheng/Desktop/SeacenLiu/OpenGLDemo/HelloCube"
+      customWorkingDirectory = "/Users/cheng/Desktop/SeacenLiu/OpenGLDemo/01-OpenGL&#x5165;&#x95e8;/HelloCube"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
