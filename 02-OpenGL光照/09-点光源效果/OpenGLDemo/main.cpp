@@ -7,9 +7,9 @@
 //
 
 /**
-* 投光物 - 定向光(平行光)
-* https://learnopengl-cn.github.io/02%20Lighting/05%20Light%20casters/
-*/
+ * 投光物 - 点光源
+ * https://learnopengl-cn.github.io/02%20Lighting/05%20Light%20casters/
+ */
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -41,6 +41,9 @@ Camera camera(glm::vec3(0.0f, 0.0f, 6.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
+
+// 光照位置
+glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
 // 计时
 float deltaTime = 0.0f;
@@ -208,14 +211,17 @@ int main(int argc, const char * argv[]) {
         lightingShader.use();
         
         // 3-2: 设置着色器的 uniform
-//        lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
-        lightingShader.setVec3("light.direction", 3.0f, 1.0f, -5.0f);
+        lightingShader.setVec3("light.position", lightPos);
         lightingShader.setVec3("viewPos", camera.Position);
         
         // 光照相关分量
         lightingShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
         lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
         lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+        
+        lightingShader.setFloat("light.constant",  1.0f);
+        lightingShader.setFloat("light.linear",    0.09f);
+        lightingShader.setFloat("light.quadratic", 0.032f);
         
         // 材质相关分量
         lightingShader.setFloat("material.shininess", 32.0f);
