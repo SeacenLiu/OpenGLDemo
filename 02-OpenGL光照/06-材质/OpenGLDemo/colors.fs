@@ -9,9 +9,9 @@ uniform vec3 viewPos;     // 观察者位置（相机位置）
 struct Light {
     vec3 position;
 
-    vec3 ambient;
-    vec3 diffuse;
-    vec3 specular;
+    vec3 ambient;   // 环境光强度向量 * 环境光颜色向量
+    vec3 diffuse;   // 漫反射光强度向量 * 漫反射光颜色向量
+    vec3 specular;  // 镜面反射强度向量 * 反光的颜色向量
 };
 uniform Light light;
 
