@@ -21,7 +21,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "shader.h"
-#include "camera.h"
+#include "seacenliu/camera.h"
 
 #include "model.h"
 
@@ -36,7 +36,7 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 // 相机
-Camera camera(glm::vec3(0.0f, 0.0f, 6.0f));
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -88,7 +88,48 @@ int main(int argc, const char * argv[]) {
     glEnable(GL_DEPTH_TEST);
     
     // --------------- 加载着色器程序 ---------------
+    Shader ourShader("model_loading.vs", "model_loading.fs");
     
+    // --------------- 加载模型文件 ---------------
+    Model ourModel((char*)"resources/objects/nanosuit/nanosuit.obj");
+//    Model ourModel((char*)"resources/objects/Model/Model.obj");
+    
+    // --------------- 渲染循环 ---------------
+    while (!glfwWindowShouldClose(window)) {
+        // 时间逻辑
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+
+        // 处理窗口输入
+        processInput(window);
+
+        // 渲染
+        glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // 配置着色器程序属性
+        ourShader.use();
+        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom),
+                                                (float)SCR_WIDTH / (float)SCR_HEIGHT,
+                                                0.1f,
+                                                100.0f);
+        glm::mat4 view = camera.GetViewMatrix();
+        ourShader.setMat4("projection", projection);
+        ourShader.setMat4("view", view);
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f));
+        model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+        ourShader.setMat4("model", model);
+        
+        // 模型渲染
+        ourModel.Draw(ourShader);
+
+        // 交换缓冲
+        glfwSwapBuffers(window);
+        // 获取输入事件
+        glfwPollEvents();
+    }
     
     return 0;
 }

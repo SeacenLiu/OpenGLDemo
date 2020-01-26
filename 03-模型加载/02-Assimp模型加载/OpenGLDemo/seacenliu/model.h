@@ -49,8 +49,8 @@ private:
         // - aiProcess_GenNormals: 为每个顶点创建法线
         // - aiProcess_SplitLargeMeshes: 将比较大的网格分割成更小的子网格，用于减少单个网格的顶点数
         // - aiProcess_OptimizeMeshes: 将多个小网格拼接为一个大的网格，减少绘制调用从而进行优化
-        const aiScene *scene = importer.ReadFile(path,
-                                                 aiProcess_Triangulate | aiProcess_FlipUVs);
+        // - aiProcess_CalcTangentSpace:
+        const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
         if(!scene                                        // Scene 是否为空
            || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE  // 场景是否加载完毕
            || !scene->mRootNode) {                       // 是否存在根结点
